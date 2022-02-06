@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"github.com/hisamafahri/coco/cmd/rgb"
+)
 
 func main() {
-	fmt.Println("Hello, coco!")
+	rgb.Hsl()
 }
