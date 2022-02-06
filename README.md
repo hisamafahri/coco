@@ -7,8 +7,12 @@ COCO (Color Converter) is a color conversion library for Go. Heavily inspired by
 Just run this:
 
 ```bash
-go get github.com/hisamafahri/commit
+go get github.com/hisamafahri/coco
 ```
+
+## Usage
+
+*Will be available soon*
 
 ## Author
 
