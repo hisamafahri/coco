@@ -1,7 +1,5 @@
 package rgb
 
-import "fmt"
-
-func Hsl() {
-	fmt.Println("Rgb2Hsl")
+func Hsl() string {
+	return "rgb2hsl"
 }
