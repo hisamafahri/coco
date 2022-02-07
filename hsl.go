@@ -60,3 +60,39 @@ func Hsl2Rgb(h float64, s float64, l float64) [3]float64 {
 
 	return result
 }
+
+func Hsl2Hsv(h float64, s float64, l float64) [3]float64 {
+	s = s / 100
+	l = l / 100
+	smin := s
+	lmin := math.Max(l, 0.01)
+
+	l *= 2
+	if l <= 1 {
+		s *= l
+	} else {
+		s *= 2 - l
+	}
+
+	if lmin <= 1 {
+		smin *= lmin
+	} else {
+		smin *= 2 - lmin
+	}
+
+	v := (l + s) / 2
+	var sv float64
+
+	if l == 0 {
+		sv = (2 * smin) / (lmin + smin)
+	} else {
+		sv = (2 * s) / (l + s)
+	}
+
+	var result [3]float64
+	result[0] = math.Round(h)
+	result[1] = math.Round(sv * 100)
+	result[2] = math.Round(v * 100)
+
+	return result
+}
