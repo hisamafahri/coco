@@ -17,6 +17,11 @@ go get github.com/hisamafahri/coco
 You can change an RGB base value to other type of value. To use it:
 
 ```go
+
+import (
+	coco "github.com/hisamafahri/coco/rgb"
+)
+
 // RGB to CMYK
 coco.Rgb2Cmyk(140, 200, 100) // Output [4]float64: [30 0 50 22]
 
