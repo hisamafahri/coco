@@ -11,13 +11,13 @@ func Rgb2Hsv(r float64, g float64, b float64) [3]float64 {
 	var h float64
 	var s float64
 
-	rVal := r / 255
-	gVal := g / 255
-	bVal := b / 255
+	r = r / 255
+	g = g / 255
+	b = b / 255
 
-	min := math.Min(math.Min(rVal, gVal), bVal)
+	min := math.Min(math.Min(r, g), b)
 
-	v := math.Max(math.Max(rVal, gVal), bVal)
+	v := math.Max(math.Max(r, g), b)
 
 	diff := v - min
 
@@ -30,15 +30,15 @@ func Rgb2Hsv(r float64, g float64, b float64) [3]float64 {
 		s = 0
 	} else {
 		s = diff / v
-		rdif = diffc(rVal)
-		gdif = diffc(gVal)
-		bdif = diffc(bVal)
+		rdif = diffc(r)
+		gdif = diffc(g)
+		bdif = diffc(b)
 
-		if rVal == v {
+		if r == v {
 			h = bdif - gdif
-		} else if gVal == v {
+		} else if g == v {
 			h = (1.0 / 3.0) + rdif - bdif
-		} else if bVal == v {
+		} else if b == v {
 			h = (2.0 / 3.0) + gdif - rdif
 		}
 

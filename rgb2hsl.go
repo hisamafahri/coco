@@ -5,13 +5,13 @@ import (
 )
 
 func Rgb2Hsl(r float64, g float64, b float64) [3]float64 {
-	rVal := r / 255
-	gVal := g / 255
-	bVal := b / 255
+	r = r / 255
+	g = g / 255
+	b = b / 255
 
-	min := math.Min(math.Min(rVal, gVal), bVal)
+	min := math.Min(math.Min(r, g), b)
 
-	max := math.Max(math.Max(rVal, gVal), bVal)
+	max := math.Max(math.Max(r, g), b)
 
 	delta := max - min
 
@@ -20,12 +20,12 @@ func Rgb2Hsl(r float64, g float64, b float64) [3]float64 {
 
 	if max == min {
 		h = 0
-	} else if rVal == max {
-		h = (gVal - bVal) / delta
-	} else if gVal == max {
-		h = 2 + (bVal-rVal)/delta
-	} else if bVal == max {
-		h = 4 + (rVal-gVal)/delta
+	} else if r == max {
+		h = (g - b) / delta
+	} else if g == max {
+		h = 2 + (b-r)/delta
+	} else if b == max {
+		h = 4 + (r-g)/delta
 	}
 
 	h = math.Min(h*60, 360)

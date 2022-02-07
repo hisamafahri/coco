@@ -5,23 +5,23 @@ import (
 )
 
 func Rgb2Cmyk(r float64, g float64, b float64) [4]float64 {
-	rVal := r / 255
-	gVal := g / 255
-	bVal := b / 255
+	r = r / 255
+	g = g / 255
+	b = b / 255
 
-	k := math.Min(math.Min(1-rVal, 1-gVal), 1-bVal)
+	k := math.Min(math.Min(1-r, 1-g), 1-b)
 
-	c := (1 - rVal - k) / (1 - k)
+	c := (1 - r - k) / (1 - k)
 	if math.IsNaN(c) {
 		c = 0
 	}
 
-	m := (1 - gVal - k) / (1 - k)
+	m := (1 - g - k) / (1 - k)
 	if math.IsNaN(m) {
 		m = 0
 	}
 
-	y := (1 - bVal - k) / (1 - k)
+	y := (1 - b - k) / (1 - k)
 	if math.IsNaN(y) {
 		y = 0
 	}
