@@ -31,6 +31,10 @@ coco.Rgb2Hwb(140, 200, 100) // Output [3]float64: [96 39 22]
 
 ```
 
+Pending: 
+1. RGB to keyword
+2. Keyword to RGB
+
 
 - *Other bases will come soon*
 
