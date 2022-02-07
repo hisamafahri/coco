@@ -29,6 +29,9 @@ coco.Rgb2Hsv(140, 200, 100) // Output [3]float64: [96 50 78]
 // RGB to HWB
 coco.Rgb2Hwb(140, 200, 100) // Output [3]float64: [96 39 22]
 
+// RGB to LAB
+coco.Rgb2Lab(140, 200, 100) // Output [3]float64: [75 -37 44]
+
 // RGB to XYZ
 coco.Rgb2Hwb(140, 200, 100) // Output [3]float64: [34 48 20]
 
