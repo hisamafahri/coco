@@ -60,6 +60,21 @@ coco.Hsl2Hsv(136, 54, 43) // Output [3]float64: [136 70 66]
 
 ```
 
+- HSV Base
+
+You can change an HSV base value to other types of value. To use it:
+
+```go
+
+import (
+	"github.com/hisamafahri/coco"
+)
+
+// HSL to RGB
+coco.Hsv2Rgb(4, 78, 92) // Output [3]float64: [235, 64, 52]
+
+```
+
 - *Other bases will come soon*
 
 ## Pending Implementation
