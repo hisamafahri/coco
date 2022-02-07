@@ -17,8 +17,14 @@ go get github.com/hisamafahri/coco
 You can change an RGB base value to other type of value. To use it:
 
 ```go
+// RGB to HSL
 coco.Rgb2Hsl(140, 200, 100) // Output [3]float64: [96 48 59]
+
+// RGB to HSV
 coco.Rgb2Hsv(140, 200, 100) // Output [3]float64: [96 50 78]
+
+// RGB to HWB
+coco.Rgb2Hwb(140, 200, 100) // Output [3]float64: [96 39 22]
 
 ```
 
