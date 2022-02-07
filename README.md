@@ -89,7 +89,7 @@ import (
 )
 
 // HWB to RGB
-coco.Hwb2Rgb(136, 0, 43) // Output [3]float64: [0, 145, 107]
+coco.Hwb2Rgb(136, 0, 43) // Output [3]float64: [0 145 107]
 
 ```
 
@@ -104,7 +104,22 @@ import (
 )
 
 // CMYK to RGB
-coco.Cmyk2Rgb(70, 0, 51, 34) // Output [3]float64: [50, 168, 82]
+coco.Cmyk2Rgb(70, 0, 51, 34) // Output [3]float64: [50 168 82]
+
+```
+
+- XYZ Base
+
+You can change an XYZ base value to other types of value. To use it:
+
+```go
+
+import (
+	"github.com/hisamafahri/coco"
+)
+
+// XYZ to RGB
+coco.Xyz2Rgb(21, 18, 5) // Output [3]float64: [166 103 46]
 
 ```
 
