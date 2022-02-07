@@ -71,10 +71,25 @@ import (
 )
 
 // HSV to RGB
-coco.Hsv2Rgb(4, 78, 92) // Output [3]float64: [235, 64, 52]
+coco.Hsv2Rgb(4, 78, 92) // Output [3]float64: [235 64 52]
 
 // HSV to HSL
 coco.Hsv2Hsl(4, 78, 92) // Output [3]float64: [4 82 56]
+
+```
+
+- HWB Base
+
+You can change an HWB base value to other types of value. To use it:
+
+```go
+
+import (
+	"github.com/hisamafahri/coco"
+)
+
+// HWB to RGB
+coco.Hwb2Rgb(136, 0, 43) // Output [3]float64: [0, 145, 107]
 
 ```
 
