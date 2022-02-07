@@ -17,6 +17,9 @@ go get github.com/hisamafahri/coco
 You can change an RGB base value to other type of value. To use it:
 
 ```go
+// RGB to CMYK
+coco.Rgb2Cmyk(140, 200, 100) // Output [4]float64: [30 0 50 22]
+
 // RGB to HSL
 coco.Rgb2Hsl(140, 200, 100) // Output [3]float64: [96 48 59]
 
