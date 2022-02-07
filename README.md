@@ -73,6 +73,9 @@ import (
 // HSV to RGB
 coco.Hsv2Rgb(4, 78, 92) // Output [3]float64: [235, 64, 52]
 
+// HSV to HSL
+coco.Hsv2Hsl(4, 78, 92) // Output [3]float64: [4 82 56]
+
 ```
 
 - *Other bases will come soon*
