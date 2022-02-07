@@ -50,5 +50,6 @@ func Rgb2Hsl(r float64, g float64, b float64) [3]float64 {
 	result[0] = math.Round(h)
 	result[1] = math.Round(s * 100)
 	result[2] = math.Round(l * 100)
+
 	return result
 }
