@@ -14,7 +14,7 @@ go get github.com/hisamafahri/coco
 
 - RGB Base
 
-You can change an RGB base value to other type of value. To use it:
+You can change an RGB base value to other types of value. To use it:
 
 ```go
 
@@ -42,12 +42,27 @@ coco.Rgb2Hwb(140, 200, 100) // Output [3]float64: [34 48 20]
 
 ```
 
-Pending: 
-1. RGB to keyword
-2. Keyword to RGB
+- HSL Base
 
+You can change an HSL base value to other types of value. To use it:
+
+```go
+
+import (
+	"github.com/hisamafahri/coco"
+)
+
+// HSL to RGB
+coco.Hsl2Rgb(136, 54, 43) // Output [3]float64: [50 169 82]
+
+```
 
 - *Other bases will come soon*
+
+## Pending Implementation
+
+1. RGB to keyword
+2. Keyword to RGB
 
 ## Author
 
