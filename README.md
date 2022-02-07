@@ -70,7 +70,7 @@ import (
 	"github.com/hisamafahri/coco"
 )
 
-// HSL to RGB
+// HSV to RGB
 coco.Hsv2Rgb(4, 78, 92) // Output [3]float64: [235, 64, 52]
 
 ```
