@@ -17,14 +17,7 @@ go get github.com/hisamafahri/coco
 You can change an RGB base value to other type of value. To use it:
 
 ```go
-import (
-    "fmt"
-    "github.com/hisamafahri/coco"
-)
-
-func main() {
-    result := coco.Rgb2Hsl(140, 200, 100) // [96 48 59]
-}
+coco.Rgb2Hsl(140, 200, 100) // Output [3]float64: [96 48 59]
 
 ```
 
