@@ -9,11 +9,9 @@ func Rgb2Hsl(r float64, g float64, b float64) [3]float64 {
 	gVal := g / 255
 	bVal := b / 255
 
-	tempMin := math.Min(rVal, gVal)
-	min := math.Min(tempMin, bVal)
+	min := math.Min(math.Min(rVal, gVal), bVal)
 
-	tempMax := math.Max(rVal, gVal)
-	max := math.Max(tempMax, bVal)
+	max := math.Max(math.Max(rVal, gVal), bVal)
 
 	delta := max - min
 
