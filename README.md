@@ -12,7 +12,24 @@ go get github.com/hisamafahri/coco
 
 ## Usage
 
-*Will be available soon*
+- RGB Base
+
+You can change an RGB base value to other type of value. To use it:
+
+```go
+import (
+    "fmt"
+    "github.com/hisamafahri/coco"
+)
+
+func main() {
+    result := coco.Rgb2Hsl(140, 200, 100) // [96 48 59]
+}
+
+```
+
+
+- *Other bases will come soon*
 
 ## Author
 
