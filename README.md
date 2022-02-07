@@ -19,7 +19,7 @@ You can change an RGB base value to other type of value. To use it:
 ```go
 
 import (
-	coco "github.com/hisamafahri/coco/rgb"
+	"github.com/hisamafahri/coco"
 )
 
 // RGB to CMYK
