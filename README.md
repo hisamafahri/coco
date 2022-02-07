@@ -18,6 +18,7 @@ You can change an RGB base value to other type of value. To use it:
 
 ```go
 coco.Rgb2Hsl(140, 200, 100) // Output [3]float64: [96 48 59]
+coco.Rgb2Hsv(140, 200, 100) // Output [3]float64: [96 50 78]
 
 ```
 
