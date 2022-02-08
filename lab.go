@@ -44,3 +44,23 @@ func Lab2Xyz(l float64, a float64, b float64) [3]float64 {
 
 	return result
 }
+
+func Lab2Lch(l float64, a float64, b float64) [3]float64 {
+	var h float64
+
+	hr := math.Atan2(b, a)
+	h = hr * 360.0 / 2.0 / math.Pi
+
+	if h < 0 {
+		h += 360
+	}
+
+	c := math.Sqrt(a*a + b*b)
+
+	var result [3]float64
+	result[0] = math.Round(l)
+	result[1] = math.Round(c)
+	result[2] = math.Round(h)
+
+	return result
+}

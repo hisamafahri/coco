@@ -136,8 +136,11 @@ import (
 	"github.com/hisamafahri/coco"
 )
 
-// LAB to RGB
+// LAB to XYZ
 coco.Lab2Xyz(50, 21, 38) // Output [3]float64: [22 18 6]
+
+// LAB to LCH
+coco.Lab2Lch(50, 21, 38) // Output [3]float64: [50 43 61]
 
 ```
 
