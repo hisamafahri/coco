@@ -121,6 +121,9 @@ import (
 // XYZ to RGB
 coco.Xyz2Rgb(21, 18, 5) // Output [3]float64: [166 103 46]
 
+// XYZ to LAB
+coco.Xyz2Lab(21, 18, 5) // Output [3]float64: [49 20 41]
+
 ```
 
 - *Other bases will come soon*

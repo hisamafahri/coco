@@ -44,3 +44,38 @@ func Xyz2Rgb(x float64, y float64, z float64) [3]float64 {
 
 	return result
 }
+
+func Xyz2Lab(x float64, y float64, z float64) [3]float64 {
+	x /= 95.047
+	y /= 100
+	z /= 108.883
+
+	if x > 0.008856 {
+		x = math.Pow(x, (1.0 / 3.0))
+	} else {
+		x = (7.787 * x) + (16.0 / 116.0)
+	}
+
+	if y > 0.008856 {
+		y = math.Pow(y, (1.0 / 3.0))
+	} else {
+		y = (7.787 * y) + (16.0 / 116.0)
+	}
+
+	if z > 0.008856 {
+		z = math.Pow(z, (1.0 / 3.0))
+	} else {
+		z = (7.787 * z) + (16.0 / 116.0)
+	}
+
+	l := (116 * y) - 16
+	a := 500 * (x - y)
+	b := 200 * (y - z)
+
+	var result [3]float64
+	result[0] = math.Round(l)
+	result[1] = math.Round(a)
+	result[2] = math.Round(b)
+
+	return result
+}
