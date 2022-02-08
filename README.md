@@ -205,6 +205,9 @@ coco.Hcg2Hsv(44, 98, 50) // Output [3]float64: [44 99 99]
 // HCG to HSL
 coco.Hcg2Hsl(44, 98, 50) // Output [3]float64: [44 98 50]
 
+// HCG to HWB
+coco.Hcg2Hwb(44, 98, 50) // Output [3]float64: [44 1 1]
+
 ```
 
 ## Pending Implementation
