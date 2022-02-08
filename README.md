@@ -46,6 +46,9 @@ coco.Rgb2Hex(140, 200, 100) // Output string: 8CC864
 // RGB to HCG
 coco.Rgb2Hcg(140, 200, 100) // Output [3]float64: [96 39 65]
 
+// RGB to Apple
+coco.Rgb2Apple(140, 200, 100) // Output [3]float64: [29041 54998 7710]
+
 ```
 
 - HSL Base
@@ -224,7 +227,7 @@ import (
 )
 
 // Apple to RGB
-coco.Apple2Rgb(44, 98, 50) // Output [3]float64: [0 1 0]
+coco.Apple2Rgb(64764, 47802, 771) // Output [3]float64: [252 186 3]
 
 ```
 
