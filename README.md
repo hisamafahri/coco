@@ -144,6 +144,21 @@ coco.Lab2Lch(50, 21, 38) // Output [3]float64: [50 43 61]
 
 ```
 
+- LCH Base
+
+You can change an LCH base value to other types of value. To use it:
+
+```go
+
+import (
+	"github.com/hisamafahri/coco"
+)
+
+// LCH to LAB
+coco.Lab2Xyz(30, 79, 50) // Output [3]float64: [30 51 61]
+
+```
+
 ## Pending Implementation
 
 1. RGB to keyword
