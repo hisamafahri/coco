@@ -2,6 +2,8 @@ package coco
 
 import (
 	"math"
+	"strconv"
+	"strings"
 )
 
 func Rgb2Cmyk(r float64, g float64, b float64) [4]float64 {
@@ -223,6 +225,13 @@ func Rgb2Xyz(r float64, g float64, b float64) [3]float64 {
 	result[2] = math.Round(z * 100)
 
 	return result
+}
+
+func Rgb2Hex(r float64, g float64, b float64) string {
+	integer := ((int64(math.Round(r)) & 0xFF) << 16) + ((int64(math.Round(g)) & 0xFF) << 8) + (int64(math.Round(b)) & 0xFF)
+
+	myString := strings.ToUpper(strconv.FormatInt(integer, 16))
+	return myString
 }
 
 // func Rgb2Ansi16(r float64, g float64, b float64) float64 {
