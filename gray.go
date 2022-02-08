@@ -37,3 +37,13 @@ func Gray2Hwb(gray float64) [3]float64 {
 
 	return result
 }
+
+func Gray2Cmyk(gray float64) [4]float64 {
+	var result [4]float64
+	result[0] = 0
+	result[1] = 0
+	result[2] = 0
+	result[3] = math.Round(gray)
+
+	return result
+}

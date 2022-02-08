@@ -247,6 +247,9 @@ import (
 // Gray to RGB
 coco.Gray2Rgb(46) // Output [3]float64: [117 117 117]
 
+// Gray to CMYK
+coco.Gray2Cmyk(46) // Output [4]float64: [0 0 0 46]
+
 // Gray to HSL
 coco.Gray2Hsl(46) // Output [3]float64: [0 0 46]
 
