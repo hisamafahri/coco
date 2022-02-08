@@ -49,6 +49,9 @@ coco.Rgb2Hcg(140, 200, 100) // Output [3]float64: [96 39 65]
 // RGB to Apple
 coco.Rgb2Apple(140, 200, 100) // Output [3]float64: [29041 54998 7710]
 
+// RGB to Gray
+coco.Rgb2Apple(140, 200, 100) // Output [1]float64: [58]
+
 ```
 
 - HSL Base

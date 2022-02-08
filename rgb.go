@@ -282,6 +282,16 @@ func Rgb2Apple(r float64, g float64, b float64) [3]float64 {
 	return result
 }
 
+func Rgb2Gray(r float64, g float64, b float64) [1]float64 {
+
+	val := (r + g + b) / 3
+
+	var result [1]float64
+	result[0] = math.Round(val / 255 * 100)
+
+	return result
+}
+
 // func Rgb2Ansi16(r float64, g float64, b float64) float64 {
 // 	value := Rgb2Hsv(r, g, b)[2] // Hsv -> ansi16 optimization
 
