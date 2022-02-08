@@ -6,7 +6,7 @@ func Hsv2Rgb(h float64, s float64, v float64) [3]float64 {
 	h = h / 60
 	s = s / 100
 	v = v / 100
-	hi := float64(int(math.Floor(h)) % (6))
+	hi := math.Mod(math.Floor(h), 6)
 	f := h - math.Floor(h)
 	p := 255 * v * (1 - s)
 	q := 255 * v * (1 - (s * f))
