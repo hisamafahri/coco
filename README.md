@@ -213,6 +213,21 @@ coco.Hcg2Hwb(44, 98, 50) // Output [3]float64: [44 1 1]
 
 ```
 
+- Apple Base
+
+You can change an Apple base value to other types of value. To use it:
+
+```go
+
+import (
+	"github.com/hisamafahri/coco"
+)
+
+// Apple to RGB
+coco.Apple2Rgb(44, 98, 50) // Output [3]float64: [0 1 0]
+
+```
+
 ## Pending Implementation
 
 1. RGB to keyword
