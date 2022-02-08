@@ -253,6 +253,9 @@ coco.Gray2Hsl(46) // Output [3]float64: [0 0 46]
 // Gray to HSV
 coco.Gray2Hsv(46) // Output [3]float64: [0 0 46]
 
+// Gray to HWB
+coco.Gray2Hwb(46) // Output [3]float64: [0 100 46]
+
 ```
 
 ## Pending Implementation
