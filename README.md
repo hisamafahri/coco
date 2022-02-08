@@ -1,6 +1,6 @@
 # COCO (Color Converter) for Go
 
-COCO (Color Converter) is a color conversion library for Go. Heavily inspired by NPM's [color-convert](https://www.npmjs.com/package/color-convert). It converts all ways between `rgb`, `hsl`, `hsv`, `hwb`, `cmyk`, `ansi`, `ansi16`, `hex` strings, and CSS keywords (will round to closest)
+COCO (Color Converter) is a color conversion library for Go. Heavily inspired by NPM's [color-convert](https://www.npmjs.com/package/color-convert). It converts all ways between `rgb`, `hsl`, `hsv`, `hwb`, `cmyk`, and `hex` strings.
 
 ## Install
 
@@ -163,7 +163,7 @@ coco.Lab2Xyz(30, 79, 50) // Output [3]float64: [30 51 61]
 
 1. RGB to keyword
 2. Keyword to RGB
-3. RGB to Ansi16
+3. `Ansi16` & `Ansi256`
 
 ## Author
 
