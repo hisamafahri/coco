@@ -247,8 +247,11 @@ import (
 // Gray to RGB
 coco.Gray2Rgb(46) // Output [3]float64: [117 117 117]
 
-// Gray to RGB
+// Gray to HSL
 coco.Gray2Hsl(46) // Output [3]float64: [0 0 46]
+
+// Gray to HSV
+coco.Gray2Hsv(46) // Output [3]float64: [0 0 46]
 
 ```
 
