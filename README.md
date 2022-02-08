@@ -126,7 +126,20 @@ coco.Xyz2Lab(21, 18, 5) // Output [3]float64: [49 20 41]
 
 ```
 
-- *Other bases will come soon*
+- LAB Base
+
+You can change an LAB base value to other types of value. To use it:
+
+```go
+
+import (
+	"github.com/hisamafahri/coco"
+)
+
+// LAB to RGB
+coco.Lab2Xyz(50, 21, 38) // Output [3]float64: [22 18 6]
+
+```
 
 ## Pending Implementation
 
