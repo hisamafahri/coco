@@ -259,6 +259,9 @@ coco.Gray2Hsv(46) // Output [3]float64: [0 0 46]
 // Gray to HWB
 coco.Gray2Hwb(46) // Output [3]float64: [0 100 46]
 
+// Gray to LAB
+coco.Gray2Lab(46) // Output [3]float64: [46 0 0]
+
 ```
 
 ## Pending Implementation

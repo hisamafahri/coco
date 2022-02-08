@@ -47,3 +47,12 @@ func Gray2Cmyk(gray float64) [4]float64 {
 
 	return result
 }
+
+func Gray2Lab(gray float64) [3]float64 {
+	var result [3]float64
+	result[0] = math.Round(gray)
+	result[1] = 0
+	result[2] = 0
+
+	return result
+}
