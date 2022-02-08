@@ -76,3 +76,24 @@ func Hcg2Hsv(h float64, c float64, g float64) [3]float64 {
 
 	return result
 }
+
+func Hcg2Hsl(h float64, c float64, g float64) [3]float64 {
+	c = c / 100
+	g = g / 100
+
+	l := g*(1.0-c) + 0.5*c
+	var s float64 = 0
+
+	if l > 0.0 && l < 0.5 {
+		s = c / (2 * l)
+	} else if l >= 0.5 && l < 1.0 {
+		s = c / (2 * (1 - l))
+	}
+
+	var result [3]float64
+	result[0] = math.Round(h)
+	result[1] = math.Round(s * 100)
+	result[2] = math.Round(l * 100)
+
+	return result
+}
