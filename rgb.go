@@ -224,3 +224,38 @@ func Rgb2Xyz(r float64, g float64, b float64) [3]float64 {
 
 	return result
 }
+
+// func Rgb2Ansi16(r float64, g float64, b float64) float64 {
+// 	value := Rgb2Hsv(r, g, b)[2] // Hsv -> ansi16 optimization
+
+// 	/*
+// 		// should check the saturation value
+// 		var value float64
+
+// 		if saturation == nil {
+// 			value = Rgb2Hsv(r, g, b)[2]
+// 		} else {
+// 			value = saturation
+// 		}
+// 	*/
+
+// 	value = math.Round(value / 50)
+
+// 	if value == 0 {
+// 		return 30
+// 	}
+
+// 	rBit := math.Round(r / 255)
+// 	gBit := math.Round(g / 255)
+// 	bBit := math.Round(b / 255)
+
+// 	ansi := (30 + (int64(bBit) << 2) | (int64(gBit) << 1) | int64(rBit))
+
+// 	fmt.Println(ansi)
+
+// 	if value == 2 {
+// 		ansi += 60
+// 	}
+
+// 	return float64(ansi)
+// }

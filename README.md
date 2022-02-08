@@ -163,6 +163,7 @@ coco.Lab2Xyz(30, 79, 50) // Output [3]float64: [30 51 61]
 
 1. RGB to keyword
 2. Keyword to RGB
+3. RGB to Ansi16
 
 ## Author
 
