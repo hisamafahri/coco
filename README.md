@@ -244,8 +244,11 @@ import (
 	"github.com/hisamafahri/coco"
 )
 
-// Apple to RGB
+// Gray to RGB
 coco.Gray2Rgb(46) // Output [3]float64: [117 117 117]
+
+// Gray to RGB
+coco.Gray2Hsl(46) // Output [3]float64: [0 0 46]
 
 ```
 
