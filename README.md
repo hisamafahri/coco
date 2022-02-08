@@ -199,6 +199,9 @@ import (
 // HCG to RGB
 coco.Hcg2Rgb(44, 98, 50) // Output [3]float64: [252 186 3]
 
+// HCG to HSV
+coco.Hcg2Rgb(44, 98, 50) // Output [3]float64: [44 99 99]
+
 ```
 
 ## Pending Implementation

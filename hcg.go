@@ -57,3 +57,22 @@ func Hcg2Rgb(h float64, c float64, g float64) [3]float64 {
 
 	return result
 }
+
+func Hcg2Hsv(h float64, c float64, g float64) [3]float64 {
+	c = c / 100
+	g = g / 100
+
+	v := c + g*(1.0-c)
+	var s float64 = 0
+
+	if v > 0.0 {
+		s = c / v
+	}
+
+	var result [3]float64
+	result[0] = math.Round(h)
+	result[1] = math.Round(s * 100)
+	result[2] = math.Round(v * 100)
+
+	return result
+}
