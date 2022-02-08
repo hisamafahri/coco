@@ -234,6 +234,21 @@ coco.Apple2Rgb(64764, 47802, 771) // Output [3]float64: [252 186 3]
 
 ```
 
+- Gray Base
+
+You can change an Gray base value to other types of value. To use it:
+
+```go
+
+import (
+	"github.com/hisamafahri/coco"
+)
+
+// Apple to RGB
+coco.Gray2Rgb(46) // Output [3]float64: [117 117 117]
+
+```
+
 ## Pending Implementation
 
 1. RGB to keyword
