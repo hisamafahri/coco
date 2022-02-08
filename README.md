@@ -64,6 +64,9 @@ coco.Hsl2Rgb(136, 54, 43) // Output [3]float64: [50 169 82]
 // HSL to HSV
 coco.Hsl2Hsv(136, 54, 43) // Output [3]float64: [136 70 66]
 
+// HSL to HCG
+coco.Hsl2Hsv(136, 54, 43) // Output [3]float64: [136 46 37]
+
 ```
 
 - HSV Base

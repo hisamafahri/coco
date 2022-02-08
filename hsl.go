@@ -96,3 +96,29 @@ func Hsl2Hsv(h float64, s float64, l float64) [3]float64 {
 
 	return result
 }
+
+func Hsl2Hcg(h float64, s float64, l float64) [3]float64 {
+	s = s / 100
+	l = l / 100
+
+	var c float64
+
+	if l < 0.5 {
+		c = 2.0 * s * l
+	} else {
+		c = 2.0 * s * (1.0 - l)
+	}
+
+	var f float64
+
+	if c < 1.0 {
+		f = (l - 0.5*c) / (1.0 - c)
+	}
+
+	var result [3]float64
+	result[0] = math.Round(h)
+	result[1] = math.Round(c * 100)
+	result[2] = math.Round(f * 100)
+
+	return result
+}
