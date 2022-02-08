@@ -162,6 +162,21 @@ coco.Lab2Xyz(30, 79, 50) // Output [3]float64: [30 51 61]
 
 ```
 
+- HEX Base
+
+You can change an HEX base value to other types of value. To use it:
+
+```go
+
+import (
+	"github.com/hisamafahri/coco"
+)
+
+// HEX to RGB
+coco.Hex2Rgb("4287F5") // Output [3]uint8: [66 135 245]
+
+```
+
 ## Pending Implementation
 
 1. RGB to keyword
