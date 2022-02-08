@@ -3,29 +3,6 @@ package coco
 import "math"
 
 func Hwb2Rgb(h float64, w float64, b float64) [3]float64 {
-	// w = w / 100
-	// b = b / 100
-	// var result [3]float64
-
-	// if w+b >= 1 {
-	// 	g := w / (w + b)
-	// 	result[0] = math.Round(g)
-	// 	result[1] = math.Round(g)
-	// 	result[2] = math.Round(g)
-	// 	return result
-	// }
-
-	// rgb := Hsl2Rgb(h, 100, 50)
-	// for i := 0; i < 3; i++ {
-	// 	rgb[i] *= (1 - w - b)
-	// 	rgb[i] += w
-	// }
-
-	// result[0] = math.Round(rgb[0])
-	// result[1] = math.Round(rgb[1])
-	// result[2] = math.Round(rgb[2])
-	// return result
-
 	h = h / 360
 	w = w / 100
 	b = b / 100
@@ -81,6 +58,26 @@ func Hwb2Rgb(h float64, w float64, b float64) [3]float64 {
 		result[1] = math.Round(w * 255)
 		result[2] = math.Round(n * 255)
 	}
+
+	return result
+}
+
+func Hwb2Hcg(h float64, w float64, b float64) [3]float64 {
+	w = w / 100
+	b = b / 100
+
+	v := 1 - b
+	c := v - w
+	var g float64 = 0
+
+	if c < 1 {
+		g = (v - c) / (1 - c)
+	}
+
+	var result [3]float64
+	result[0] = math.Round(h)
+	result[1] = math.Round(c * 100)
+	result[2] = math.Round(g * 100)
 
 	return result
 }

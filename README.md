@@ -103,6 +103,9 @@ import (
 // HWB to RGB
 coco.Hwb2Rgb(136, 0, 43) // Output [3]float64: [0 145 107]
 
+// HWB to HCG
+coco.Hwb2Hcg(136, 0, 43) // Output [3]float64: [136 57 0]
+
 ```
 
 - CMYK Base
