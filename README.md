@@ -43,6 +43,9 @@ coco.Rgb2Hwb(140, 200, 100) // Output [3]float64: [34 48 20]
 // RGB to HEX
 coco.Rgb2Hex(140, 200, 100) // Output string: 8CC864
 
+// RGB to HCG
+coco.Rgb2Hcg(140, 200, 100) // Output [3]float64: [96 39 65]
+
 ```
 
 - HSL Base

@@ -234,6 +234,45 @@ func Rgb2Hex(r float64, g float64, b float64) string {
 	return myString
 }
 
+func Rgb2Hcg(r float64, g float64, b float64) [3]float64 {
+	r = r / 255
+	g = g / 255
+	b = b / 255
+
+	max := math.Max(math.Max(r, g), b)
+	min := math.Min(math.Min(r, g), b)
+	chroma := max - min
+
+	var grayscale float64
+	var hue float64
+
+	if chroma < 1 {
+		grayscale = min / (1 - chroma)
+	} else {
+		grayscale = 0
+	}
+
+	if chroma <= 0 {
+		hue = 0
+	} else if max == r {
+		hue = math.Mod((g-b)/chroma, 6)
+	} else if max == g {
+		hue = 2 + (b-r)/chroma
+	} else {
+		hue = 4 + (r-g)/chroma
+	}
+
+	hue /= 6
+	hue = math.Mod(hue, 1)
+
+	var result [3]float64
+	result[0] = math.Round(hue * 360)
+	result[1] = math.Round(chroma * 100)
+	result[2] = math.Round(grayscale * 100)
+
+	return result
+}
+
 // func Rgb2Ansi16(r float64, g float64, b float64) float64 {
 // 	value := Rgb2Hsv(r, g, b)[2] // Hsv -> ansi16 optimization
 
