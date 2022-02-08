@@ -186,6 +186,21 @@ coco.Hex2Rgb("4287F5") // Output [3]uint8: [66 135 245]
 
 ```
 
+- HCG Base
+
+You can change an HCG base value to other types of value. To use it:
+
+```go
+
+import (
+	"github.com/hisamafahri/coco"
+)
+
+// HCG to RGB
+coco.Hcg2Rgb(44, 98, 50) // Output [3]float64: [252 186 3]
+
+```
+
 ## Pending Implementation
 
 1. RGB to keyword
