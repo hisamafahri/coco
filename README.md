@@ -38,7 +38,7 @@ coco.Rgb2Hwb(140, 200, 100) // Output [3]float64: [96 39 22]
 coco.Rgb2Lab(140, 200, 100) // Output [3]float64: [75 -37 44]
 
 // RGB to XYZ
-coco.Rgb2Hwb(140, 200, 100) // Output [3]float64: [34 48 20]
+coco.Rgb2Xyz(140, 200, 100) // Output [3]float64: [34 48 20]
 
 // RGB to HEX
 coco.Rgb2Hex(140, 200, 100) // Output string: 8CC864
@@ -50,7 +50,7 @@ coco.Rgb2Hcg(140, 200, 100) // Output [3]float64: [96 39 65]
 coco.Rgb2Apple(140, 200, 100) // Output [3]float64: [29041 54998 7710]
 
 // RGB to Gray
-coco.Rgb2Apple(140, 200, 100) // Output [1]float64: [58]
+coco.Rgb2Gray(140, 200, 100) // Output [1]float64: [58]
 
 ```
 
@@ -71,7 +71,7 @@ coco.Hsl2Rgb(136, 54, 43) // Output [3]float64: [50 169 82]
 coco.Hsl2Hsv(136, 54, 43) // Output [3]float64: [136 70 66]
 
 // HSL to HCG
-coco.Hsl2Hsv(136, 54, 43) // Output [3]float64: [136 46 37]
+coco.Hsl2Hcg(136, 54, 43) // Output [3]float64: [136 46 37]
 
 ```
 
@@ -176,7 +176,7 @@ import (
 )
 
 // LCH to LAB
-coco.Lab2Xyz(30, 79, 50) // Output [3]float64: [30 51 61]
+coco.Lch2Lab(30, 79, 50) // Output [3]float64: [30 51 61]
 
 ```
 
@@ -251,7 +251,7 @@ coco.Gray2Rgb(46) // Output [3]float64: [117 117 117]
 coco.Gray2Cmyk(46) // Output [4]float64: [0 0 0 46]
 
 // Gray to HEX
-coco.Gray2Lab(46) // Output string: 757575
+coco.Gray2Hex(46) // Output string: 757575
 
 // Gray to HSL
 coco.Gray2Hsl(46) // Output [3]float64: [0 0 46]
